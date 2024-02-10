@@ -10,10 +10,11 @@ public class Login {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds("20"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://rahulshettyacademy.com/client/");
         driver.findElement(By.id("userEmail")).sendKeys("abdcdefgh@ijkl");
         driver.findElement(By.id("userPassword")).sendKeys("almkhopst");
+        driver.findElement(By.xpath("//input[@type='submit']")).click();
      
 	}
 
