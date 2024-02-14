@@ -1,47 +1,53 @@
 package Logonmysql.Base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 
-import java.sql;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Base {
 	
 	   
-	    public static void main(String args[])
+	WebDriver driver;
+	String email;
+	String password1;
+	String title;
+	
+        @BeforeTest
+	    public void method()
 	        throws SQLException, ClassNotFoundException
 	    {
-	        String driverClassName
-	            = "sun.jdbc.odbc.JdbcOdbcDriver";
-	        String url = "https:localhost/3306";
+        	driver= new ChromeDriver();
+        	driver.manage().window().maximize();
+        	
+	        String url = "localhost:3306/LoginDB";
 	        String username = "root";
-	        String password = "Ahmed@1426";
-	        String query
-	            = "use LoginDB,"
-	            		+ "select url from LoginTable";
+	        String password = "root";
+	        String query="select * from LoginTable";
 	 
 	        // Load driver class
-	        Class.forName(driverClassName);
-	 
+	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        // Obtain a connection
-	        Connection con = DriverManager.getConnection(
+	        Connection con = DriverManager.getConnection("jdbc:mysql://"+
 	            url, username, password);
+	        Statement st= con.createStatement();
+	        ResultSet rs= st.executeQuery("select * from LoginTable");
+	        rs.next();
+	        driver.get(rs.getString("url"));
+	        email=rs.getString("email");
+	        password1=rs.getString("pass");
+	        title= rs.getString("title");
+	        
+	        
 	 
-	        // Obtain a statement
-	        Statement st = con.createStatement();
-	 
-	        // Execute the query
-	        int count = st.executeUpdate(query);
-	        System.out.println(
-	            "number of rows affected by this query= "
-	            + count);
+	        
+	        
+	        
+	    }
 	 
 	        // Closing the connection as per the
 	        // requirement with connection is completed
-	        con.close();
-	    }
+	        
 
 }

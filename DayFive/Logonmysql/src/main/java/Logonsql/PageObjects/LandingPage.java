@@ -18,7 +18,7 @@ public LandingPage(WebDriver driver)
 @FindBy(id="userEmail")
 WebElement email;
 
-@FindBy(id="userPass")
+@FindBy(id="userPassword")
 WebElement pass;
 
 @FindBy(xpath="//input[@type='submit']")
