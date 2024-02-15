@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Abstract {
 	
 	WebDriver driver;
-	By title= By.tagName("title");
+	
 	
 	public Abstract(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -19,10 +19,11 @@ public class Abstract {
 		
 	}
 
-	public void waitElementToAppear(String a)
+	public void waitElementToAppear(String a) throws InterruptedException
 	{
+		Thread.sleep(300);
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(60));
-	    wait.until(ExpectedConditions.attributeContains(title, "title", a));
+	    wait.until(ExpectedConditions.titleIs(a));
 		
 		
 	}

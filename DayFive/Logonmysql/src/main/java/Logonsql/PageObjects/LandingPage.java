@@ -24,7 +24,7 @@ WebElement pass;
 @FindBy(xpath="//input[@type='submit']")
 WebElement button;
 
-public void Login(String mail, String pas, String title)
+public void Login(String mail, String pas, String title) throws InterruptedException
 {
 	email.clear();
 	email.sendKeys(mail);
