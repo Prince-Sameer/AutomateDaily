@@ -27,9 +27,9 @@ Feature: Login
   Scenario: I am able to Login successfullly
     Given I visit the url on chrome browser
     When I enter email is in email field
-    And II close the browser enter password in password feld
+    And I enter password in password field
     And I click on the login button
     Then I am able to see the homepage
-    And 
+    And  I close the browser
 
   

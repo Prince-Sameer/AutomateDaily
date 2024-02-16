@@ -1,7 +1,13 @@
 package CucumbExcel.Tests;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cucumb.pageobjs.*;
@@ -10,13 +16,30 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Logon extends Base {
+public class Logon  {
+	
+	WebDriver driver;
+	String url, email, password;
+
+	@Given("^I set up env")
+	public void setUp() throws IOException
+	{
+		driver= new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().window().maximize();
+		
+		FileInputStream fi= new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/Data.xlsx");
+		XSSFWorkbook xs= new XSSFWorkbook(fi);
+		XSSFSheet credentials=xs.getSheet("Credentials");
+		url= credentials.getRow(1).getCell(0).getStringCellValue();
+		email= credentials.getRow(1).getCell(1).getStringCellValue();
+		password=credentials.getRow(1).getCell(2).getStringCellValue();
+	}
 	
 	@Given("^I visit the url on chrome browser")
 	public void visit() throws IOException
 	{  
-		Logon a = new Logon();
-		a.setUp();
+		
 		driver.get(url);
 	}
 	
@@ -28,7 +51,7 @@ public class Logon extends Base {
 		
 	}
 	
-	@When("^I enter password is in password field")
+	@When("^I enter password in password field")
 	public void pass()
 	{
 		landingPage a= new landingPage(driver);
