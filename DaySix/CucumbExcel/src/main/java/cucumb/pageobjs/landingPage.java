@@ -23,8 +23,7 @@ public class landingPage extends Abstract {
 	@FindBy(xpath="//input[@type='submit']")
 	WebElement button;
 	
-	@FindBy(tagName="b")
-	WebElement text;
+	
 	
 	
 	
@@ -45,9 +44,9 @@ public class landingPage extends Abstract {
 		button.click();
 	}
 	
-	public void HomeVisib()
+	public void HomeVisib(WebDriver driver)
 	{   
-		wait(text);
+		wait(driver.findElement(By.xpath("(//h5/b)[1]")));
 	}
 	public void close()
 	{

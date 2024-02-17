@@ -18,7 +18,7 @@ public class Abstract {
 
 	public void wait(WebElement a)
 	{
-		WebDriverWait wa= new WebDriverWait(driver, Duration.ofSeconds(100));
+		WebDriverWait wa= new WebDriverWait(driver, Duration.ofSeconds(10));
 		wa.until(ExpectedConditions.textToBePresentInElement(a, "ZARA COAT 3"));
 	}
 

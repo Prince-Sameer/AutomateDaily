@@ -71,7 +71,7 @@ public class Logon  {
 	{
 		landingPage a= new landingPage(driver);
 		Assert.assertTrue(true);
-		a.HomeVisib();
+		a.HomeVisib(driver);
 	}
 	
 	@And("^I close the browser")
