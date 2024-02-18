@@ -3,6 +3,7 @@ package extentReports.components;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import extentReports.Tests.Base;
@@ -46,7 +47,7 @@ public class Listener extends Base implements ITestListener {
 		test.addScreenCaptureFromPath(path);
 	}
 	
-	public void onFinish(ITestResult result)
+	public void onFinish(ITestContext result)
 	{
 		extent.flush();
 	}
