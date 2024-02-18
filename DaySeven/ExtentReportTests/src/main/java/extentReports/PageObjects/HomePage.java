@@ -26,7 +26,7 @@ public class HomePage extends Abstract {
 	
 	public void AddToCart()
 	{
-		System.out.print(li.size());
+		
 		WebElement driver2= li.stream().filter(p->p.findElement(By .tagName("b")).getText().equalsIgnoreCase(text)).findFirst().orElse(null);
 		driver2.findElement(By .className("w-10")).click();
 		driver.close();
