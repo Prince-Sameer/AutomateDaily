@@ -30,7 +30,7 @@ public class HomePage extends Abstract {
 	@FindBy(css="div.inventory_item")
 	List<WebElement> li;
 	
-	WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name ")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
+	WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
 	
 	public void Add_to_cart()
 	{
