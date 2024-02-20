@@ -32,7 +32,7 @@ public class LandingPage extends Abstract{
 	@FindBy(css="input[type='submit']")
 	WebElement button;
 	
-	public HomePage Login()
+	public HomePage Login() throws InterruptedException
 	{
 		userName.clear();
 		String[] s= Name.getText().split("\n");

@@ -14,18 +14,20 @@ import Fluent.Abstract.Abstract;
 
 public class HomePage extends Abstract {
 	
-	public HomePage(WebDriver driver)
+	public HomePage(WebDriver driver) throws InterruptedException
 	{
 		super(driver);
-		
-		PageFactory.initElements(driver, this);
 		JavascriptExecutor js= (JavascriptExecutor) driver;
 		js.executeScript("return navigator.webdriver = false;");
+		
+		Thread.sleep(1000);
+		PageFactory.initElements(driver, this);
+		
 		
 		
 	}
 	
-	@FindBy(css=".inventory_item")
+	@FindBy(css="div.inventory_item")
 	List<WebElement> li;
 	
 	WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name ")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);

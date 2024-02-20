@@ -10,7 +10,7 @@ public class Tests extends Base {
 
 	HomePage b;
 	@Test
-	public void Login()
+	public void Login() throws InterruptedException
 	{
 		LandingPage a= new LandingPage(driver);
 		b=a.Login();

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="0" failed="1" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-20T13:06:20 IST" name="Default suite" finished-at="2024-02-20T13:06:27 IST" duration-ms="7345">
+  <suite started-at="2024-02-20T13:33:48 IST" name="Default suite" finished-at="2024-02-20T13:33:57 IST" duration-ms="9775">
     <groups>
     </groups>
-    <test started-at="2024-02-20T13:06:20 IST" name="Default test" finished-at="2024-02-20T13:06:27 IST" duration-ms="7345">
+    <test started-at="2024-02-20T13:33:48 IST" name="Default test" finished-at="2024-02-20T13:33:57 IST" duration-ms="9775">
       <class name="Fluent.Tests.Tests">
-        <test-method is-config="true" signature="before()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:06:20 IST" name="before" finished-at="2024-02-20T13:06:27 IST" duration-ms="6749" status="PASS">
+        <test-method is-config="true" signature="before()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:33:48 IST" name="before" finished-at="2024-02-20T13:33:57 IST" duration-ms="9151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="Login()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:06:27 IST" name="Login" finished-at="2024-02-20T13:06:27 IST" duration-ms="533" status="FAIL">
+        <test-method signature="Login()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:33:57 IST" name="Login" finished-at="2024-02-20T13:33:57 IST" duration-ms="548" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "java.util.List.stream()" because "this.li" is null]]>
@@ -55,7 +55,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="void_add_to_cart()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:06:27 IST" name="void_add_to_cart" finished-at="2024-02-20T13:06:27 IST" depends-on-methods="Fluent.Tests.Tests.Login" duration-ms="0" status="SKIP">
+        <test-method signature="void_add_to_cart()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:33:57 IST" name="void_add_to_cart" finished-at="2024-02-20T13:33:57 IST" depends-on-methods="Fluent.Tests.Tests.Login" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method Tests.void_add_to_cart()[pri:0, instance:Fluent.Tests.Tests@7e7be63f] depends on not successfully finished methods]]>
@@ -87,7 +87,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- void_add_to_cart -->
-        <test-method signature="remove()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:06:27 IST" name="remove" finished-at="2024-02-20T13:06:27 IST" depends-on-methods="Fluent.Tests.Tests.void_add_to_cart" duration-ms="0" status="SKIP">
+        <test-method signature="remove()[pri:0, instance:Fluent.Tests.Tests@7e7be63f]" started-at="2024-02-20T13:33:57 IST" name="remove" finished-at="2024-02-20T13:33:57 IST" depends-on-methods="Fluent.Tests.Tests.void_add_to_cart" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method Tests.remove()[pri:0, instance:Fluent.Tests.Tests@7e7be63f] depends on not successfully finished methods]]>
