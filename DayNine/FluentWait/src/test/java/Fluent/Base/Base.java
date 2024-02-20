@@ -22,7 +22,6 @@ public class Base {
 		
 		
 		ChromeOptions options= new ChromeOptions();
-		//options.setCapability("javascriptEnabled", true);
 		options.addArguments("--disable-blink-features=AutomationControlled");
 		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
 		driver= new ChromeDriver(options);
@@ -32,7 +31,7 @@ public class Base {
 		Properties pro= new Properties();
 		pro.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/prod.properties"));
 		driver.get(pro.getProperty("url"));
-		product=pro.getProperty("produc");
+		product=pro.getProperty("product");
 		
 		
 		
