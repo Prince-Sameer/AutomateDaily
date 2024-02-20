@@ -27,20 +27,24 @@ public class HomePage extends Abstract {
 		
 	}
 	
-	@FindBy(xpath="//div[@class=inventory_item]")
+	@FindBy(xpath="//div[@class='inventory_item']")
 	List<WebElement> li;
 	
-	WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
 	
 	public void Add_to_cart()
 	{
+		
+		System.out.println(li.isEmpty());
+		
+		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
 		driver2.findElement(By .className("btn_small")).click();
 	}
 	
 	public void remove_from_cart()
 	{
+		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
 		wait(driver2.findElement(By .className("btn_small")));
-		driver2.findElement(By .className("btn_small")).click();
+	    driver2.findElement(By .className("btn_small")).click();
 	}
 	
 	
