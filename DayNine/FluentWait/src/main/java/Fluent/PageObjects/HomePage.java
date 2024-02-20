@@ -20,14 +20,14 @@ public class HomePage extends Abstract {
 		JavascriptExecutor js= (JavascriptExecutor) driver;
 		js.executeScript("return navigator.webdriver = false;");
 		
-		Thread.sleep(1000);
+		waitElementToAppear(driver.findElement(By.className("inventory_item")));
 		PageFactory.initElements(driver, this);
 		
 		
 		
 	}
 	
-	@FindBy(css="div.inventory_item")
+	@FindBy(xpath="//div[@class=inventory_item]")
 	List<WebElement> li;
 	
 	WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
