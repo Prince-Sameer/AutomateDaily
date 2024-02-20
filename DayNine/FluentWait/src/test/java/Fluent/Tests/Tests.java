@@ -19,13 +19,13 @@ public class Tests extends Base {
 	@Test(dependsOnMethods= {"Login"})
 	public void void_add_to_cart()
 	{
-		b.Add_to_cart();
+		b.Add_to_cart(product);
 	}
 	
 	@Test(dependsOnMethods={"void_add_to_cart"})
 	public void remove()
 	{
-		b.remove_from_cart();
+		b.remove_from_cart(product);
 		driver.quit();
 	}
 	

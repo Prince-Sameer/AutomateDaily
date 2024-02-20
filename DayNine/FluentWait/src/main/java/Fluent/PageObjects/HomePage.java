@@ -31,18 +31,18 @@ public class HomePage extends Abstract {
 	List<WebElement> li;
 	
 	
-	public void Add_to_cart()
+	public void Add_to_cart(String text)
 	{
 		
 		System.out.println(li.isEmpty());
 		
-		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
+		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase(text)).findFirst().orElse(null);
 		driver2.findElement(By .className("btn_small")).click();
 	}
 	
-	public void remove_from_cart()
+	public void remove_from_cart(String text)
 	{
-		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase("Sauce Labs Bolt T-Shirt")).findFirst().orElse(null);
+		WebElement driver2= li.stream().filter(p->p.findElement(By.className("inventory_item_name")).getText().equalsIgnoreCase(text)).findFirst().orElse(null);
 		wait(driver2.findElement(By .className("btn_small")));
 	    driver2.findElement(By .className("btn_small")).click();
 	}

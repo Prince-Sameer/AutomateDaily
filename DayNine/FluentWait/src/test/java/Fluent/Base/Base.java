@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeTest;
 public class Base {
 	
 	protected WebDriver driver;
+	protected String product="";
 	@BeforeTest
 	public void before() throws Exception
 	{
@@ -31,6 +32,7 @@ public class Base {
 		Properties pro= new Properties();
 		pro.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/prod.properties"));
 		driver.get(pro.getProperty("url"));
+		product=pro.getProperty("produc");
 		
 		
 		
