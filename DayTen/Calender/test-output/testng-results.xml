@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T09:44:22 IST" name="Default suite" finished-at="2024-02-22T09:45:34 IST" duration-ms="72312">
+  <suite started-at="2024-02-22T09:57:25 IST" name="Default suite" finished-at="2024-02-22T09:58:40 IST" duration-ms="74994">
     <groups>
     </groups>
-    <test started-at="2024-02-22T09:44:22 IST" name="Default test" finished-at="2024-02-22T09:45:34 IST" duration-ms="72312">
+    <test started-at="2024-02-22T09:57:25 IST" name="Default test" finished-at="2024-02-22T09:58:40 IST" duration-ms="74994">
       <class name="Calender.Tests.DatePicker">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Calender.Tests.DatePicker@1af2d44a]" started-at="2024-02-22T09:44:22 IST" name="setUp" finished-at="2024-02-22T09:44:33 IST" duration-ms="11860" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Calender.Tests.DatePicker@1af2d44a]" started-at="2024-02-22T09:57:25 IST" name="setUp" finished-at="2024-02-22T09:57:38 IST" duration-ms="13175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="selectDate()[pri:0, instance:Calender.Tests.DatePicker@1af2d44a]" started-at="2024-02-22T09:44:33 IST" name="selectDate" finished-at="2024-02-22T09:45:34 IST" duration-ms="60374" status="FAIL">
+        <test-method signature="selectDate()[pri:0, instance:Calender.Tests.DatePicker@1af2d44a]" started-at="2024-02-22T09:57:38 IST" name="selectDate" finished-at="2024-02-22T09:58:40 IST" duration-ms="61746" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (ac3c5d8e5f89a803f91b6a867823db4f)] -> xpath: //input[@id='timeNavMobileDatePicker']/ancestor::div[@class='body']] (tried for 60 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (86854c6ae49f0c3818e20e71066ffc08)] -> css selector: div.calDateString] (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\91891\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64441}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64441/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ac3c5d8e5f89a803f91b6a867823db4f]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\91891\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49995}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49995/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86854c6ae49f0c3818e20e71066ffc08]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (ac3c5d8e5f89a803f91b6a867823db4f)] -> xpath: //input[@id='timeNavMobileDatePicker']/ancestor::div[@class='body']] (tried for 60 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (86854c6ae49f0c3818e20e71066ffc08)] -> css selector: div.calDateString] (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\91891\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64441}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64441/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ac3c5d8e5f89a803f91b6a867823db4f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\91891\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49995}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49995/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86854c6ae49f0c3818e20e71066ffc08
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at Calender.Abstract.Abstract.waiForElementToBeVisible(Abstract.java:28)
-at Calender.PageObjects.CalenderPage.selectDate(CalenderPage.java:41)
+at Calender.PageObjects.CalenderPage.selectDate(CalenderPage.java:42)
 at Calender.Tests.DatePicker.selectDate(DatePicker.java:14)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

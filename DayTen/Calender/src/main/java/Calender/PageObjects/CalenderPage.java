@@ -2,6 +2,7 @@ package Calender.PageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,11 +38,14 @@ public class CalenderPage extends Abstract {
 	
 	public void selectDate(String year, String month, String date)
 	{
-		Actions act = new Actions(driver);
-		waiForElementToBeVisible(drop);
-		act.moveToElement(drop).moveByOffset(0, 0).click().build().perform();
+		//Actions act = new Actions(driver);
+		//waiForElementToBeVisible(drop);
+		waiForElementToBeVisible(driver.findElement(By .cssSelector("div.calDateString")));
+		//act.moveToElement(drop).moveByOffset(0, 0).click().build().perform();
+		//JavascriptExecutor js =(JavascriptExecutor) driver;
+		//js.executeScript("document.getElementById(timeNavMobileDatePicker).click()");
 		
-		
+		driver.findElement(By .cssSelector("div.calDateString")).click();
 		waiForElementToBeClickable(picker);
 		picker.sendKeys(year);
 		Select month1= new Select(monthdropdown);
