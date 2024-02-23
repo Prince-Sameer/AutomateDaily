@@ -11,6 +11,7 @@ public class DatePicker extends Base {
 	public void selectDate()
 	{
 		CalenderPage p= new CalenderPage(driver);
+		p.goTOCalender();
 		p.selectDate(year, month, date);
 	}
 	

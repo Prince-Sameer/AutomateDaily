@@ -1,6 +1,7 @@
 package Calender.PageObjects;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,6 +36,20 @@ public class CalenderPage extends Abstract {
 	
 	@FindBy(xpath="//span[@class='flatpickr-day ']")
 	List<WebElement> li;
+	
+	@FindBy(xpath="//a[contains(text(), 'Live Demo')]")
+	WebElement calender;
+	
+	
+	public void goTOCalender()
+	{
+		calender.click();
+		Set<String> handles= driver.getWindowHandles();
+		for(String handle: handles)
+		{
+		driver.switchTo().window(handle);
+	}
+	}
 	
 	public void selectDate(String year, String month, String date)
 	{
