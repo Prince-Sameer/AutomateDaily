@@ -51,9 +51,9 @@ public class Base {
 		// TODO Auto-generated method stub
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source= ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir")+"/reports/"+methodName+".png");
+		File file = new File(System.getProperty("user.dir")+"/report/"+methodName+".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+"/reports/"+methodName+".png";
+		return System.getProperty("user.dir")+"/report/"+methodName+".png";
 	}
 	
     

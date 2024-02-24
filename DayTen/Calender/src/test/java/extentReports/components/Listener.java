@@ -30,7 +30,19 @@ public class Listener extends Base implements ITestListener {
 	public void onTestSuccess(ITestResult result)
 	{
 		test.log(Status.PASS, "Test Passed");
+		String path="";
+		WebDriver driver = (WebDriver) result.getAttribute("driver");
+		if (driver!=null)
+		{
+			try {
+				path= getStringShots(result.getName(), driver);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
+	
 	public void onTestFailure(ITestResult result)
 	{
 		test.fail(result.getThrowable());
