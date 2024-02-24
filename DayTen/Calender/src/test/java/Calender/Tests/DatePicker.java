@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import Calender.Base.Base;
 import Calender.PageObjects.CalenderPage;
+import junit.framework.Assert;
+
 
 public class DatePicker extends Base {
 
@@ -16,6 +18,7 @@ public class DatePicker extends Base {
 		CalenderPage p= new CalenderPage(driver);
 		p.goTOCalender();
 		p.selectDate(year, month, date);
+		
 	}
 	
 }

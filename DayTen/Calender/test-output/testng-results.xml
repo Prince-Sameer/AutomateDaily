@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-24T16:14:36 IST" name="Suite" finished-at="2024-02-24T16:14:59 IST" duration-ms="23072">
+  <suite started-at="2024-02-24T19:24:20 IST" name="Suite" finished-at="2024-02-24T19:24:37 IST" duration-ms="16357">
     <groups>
     </groups>
-    <test started-at="2024-02-24T16:14:36 IST" name="Test" finished-at="2024-02-24T16:14:59 IST" duration-ms="23072">
+    <test started-at="2024-02-24T19:24:20 IST" name="Test" finished-at="2024-02-24T19:24:37 IST" duration-ms="16357">
       <class name="Calender.Tests.DatePicker">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Calender.Tests.DatePicker@600b90df]" started-at="2024-02-24T16:14:36 IST" name="setUp" finished-at="2024-02-24T16:14:49 IST" duration-ms="12451" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Calender.Tests.DatePicker@600b90df]" started-at="2024-02-24T19:24:20 IST" name="setUp" finished-at="2024-02-24T19:24:31 IST" duration-ms="10448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="selectDate()[pri:0, instance:Calender.Tests.DatePicker@600b90df]" started-at="2024-02-24T16:14:49 IST" name="selectDate" finished-at="2024-02-24T16:14:59 IST" duration-ms="10566" status="PASS">
+        <test-method signature="selectDate()[pri:0, instance:Calender.Tests.DatePicker@600b90df]" started-at="2024-02-24T19:24:31 IST" name="selectDate" finished-at="2024-02-24T19:24:36 IST" duration-ms="5403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDate -->

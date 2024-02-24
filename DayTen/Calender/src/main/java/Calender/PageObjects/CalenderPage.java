@@ -58,7 +58,6 @@ public class CalenderPage extends Abstract {
 		Select month1= new Select(Month);
 		month1.selectByVisibleText(month);
 		li.stream().filter(a->a.getText().equalsIgnoreCase(date)).findFirst().orElse(null).click();
-		driver.quit();
 		
 	}
 

@@ -31,23 +31,29 @@ public class Listener extends Base implements ITestListener {
 	{
 		test.log(Status.PASS, "Test Passed");
 		String path="";
-		WebDriver driver = (WebDriver) result.getAttribute("driver");
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		if (driver!=null)
 		{
 			try {
 				path= getStringShots(result.getName(), driver);
+				driver.quit();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
+		test.addScreenCaptureFromPath(path);
 	}
 	
 	public void onTestFailure(ITestResult result)
 	{
 		test.fail(result.getThrowable());
 		String path="";
-		WebDriver driver=null;
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e1) {
@@ -61,6 +67,7 @@ public class Listener extends Base implements ITestListener {
 			e.printStackTrace();
 		}
 		test.addScreenCaptureFromPath(path);
+		driver.quit();
 	}
 	
 	
