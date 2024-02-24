@@ -22,17 +22,14 @@ public class CalenderPage extends Abstract {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//input[@id='timeNavMobileDatePicker']/ancestor::div[@class='body']")
+	@FindBy(xpath="//input[@id='timeNavDatePicker']")
 	WebElement drop;
 	
-	@FindBy(css=".flatpickr-month")
-	WebElement picker;
+	@FindBy(xpath="//div[@class='flatpickr-calendar animate open arrowTop arrowLeft']//div/div/input[@class='numInput cur-year']")
+	WebElement Year;
 	
-	@FindBy(css=".flatpickr-monthDropdown-months")
-	WebElement monthdropdown;
-	
-	@FindBy(css="flatpickr-days")
-	WebElement datepicker;
+	@FindBy(xpath="//div[@class='flatpickr-calendar animate open arrowTop arrowLeft']//select")
+	WebElement Month;
 	
 	@FindBy(xpath="//span[@class='flatpickr-day ']")
 	List<WebElement> li;
@@ -51,27 +48,17 @@ public class CalenderPage extends Abstract {
 	}
 	}
 	
-	public void selectDate(String year, String month, String date)
+	public void selectDate(String year, String month, String date) throws Exception
 	{
-		//Actions act = new Actions(driver);
-		//waiForElementToBeVisible(drop);
-		waiForElementToBeVisible(driver.findElement(By .cssSelector("div.calDateString")));
-		//act.moveToElement(drop).moveByOffset(0, 0).click().build().perform();
-		//JavascriptExecutor js =(JavascriptExecutor) driver;
-		//js.executeScript("document.getElementById(timeNavMobileDatePicker).click()");
-		
-		driver.findElement(By .cssSelector("div.calDateString")).click();
-		waiForElementToBeClickable(picker);
-		picker.sendKeys(year);
-		Select month1= new Select(monthdropdown);
+		Thread.sleep(3000);
+		drop.click();
+		Year.click();
+		Year.sendKeys(year);
+		Month.click();
+		Select month1= new Select(Month);
 		month1.selectByVisibleText(month);
-		waiForElementToBeClickable(datepicker);
 		li.stream().filter(a->a.getText().equalsIgnoreCase(date)).findFirst().orElse(null).click();
-		driver.close();
-		
-		
-		
-		
+		driver.quit();
 		
 	}
 
