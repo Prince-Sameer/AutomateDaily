@@ -31,20 +31,23 @@ public class Listener extends Base implements ITestListener {
 	{
 		test.fail(result.getThrowable());
 		String path="";
-		WebDriver driver=null;
 		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
+					.get(result.getInstance());
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
 			path = getStringshots(result.getMethod().getMethodName(), driver);
+			
+			driver.quit();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		test.addScreenCaptureFromPath(path);
+		
 	}
 	
 	public void onFinish(ITestContext result)

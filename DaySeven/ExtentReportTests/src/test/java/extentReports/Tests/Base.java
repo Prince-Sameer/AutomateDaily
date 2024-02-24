@@ -21,7 +21,7 @@ import org.testng.reporters.Files;
 
 public class Base {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	String browser, url, email, pass, prod;
 	
 	@BeforeTest
@@ -65,9 +65,9 @@ public class Base {
 	{
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source= ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir")+"/reports/"+testCaseName+".png");
+		File file = new File(System.getProperty("user.dir")+"/report/"+testCaseName+".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+"/reports/"+testCaseName+".png";
+		return System.getProperty("user.dir")+"/report/"+testCaseName+".png";
 		
 		
 	}
