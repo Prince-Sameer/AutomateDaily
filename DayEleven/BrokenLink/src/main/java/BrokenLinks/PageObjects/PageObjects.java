@@ -53,6 +53,8 @@ public class PageObjects extends Abstract {
 				if(responseCode>399)
 				{
 					brokenLinks.put(link.getText(), url);
+					Assert.fail();
+					continue;
 				}
 				else
 				{
@@ -63,7 +65,6 @@ public class PageObjects extends Abstract {
 			
 		}
 		
-		driver.quit();
 	}
 	
 	
