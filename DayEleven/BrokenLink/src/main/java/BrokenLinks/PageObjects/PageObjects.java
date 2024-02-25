@@ -18,6 +18,8 @@ import org.testng.Assert;
 import BrokenLink.Abstract.Abstract;
 
 public class PageObjects extends Abstract {
+	
+	HashMap<String, String> brokenLinks= new HashMap<String, String>();
 	public PageObjects(WebDriver driver)
 	{
 		super(driver);
@@ -35,7 +37,7 @@ public class PageObjects extends Abstract {
 	public void checkBroken() throws Exception, IOException
 	{
 		
-		HashMap<String, String> brokenLinks= new HashMap<String, String>();
+		
 		scrollTo(Footer);
 		ListIterator<WebElement> a=footerlinks.listIterator();
 		while(a.hasNext())
