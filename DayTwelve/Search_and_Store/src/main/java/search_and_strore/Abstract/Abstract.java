@@ -21,5 +21,11 @@ public class Abstract {
 		WebDriverWait ab= new WebDriverWait(driver, Duration.ofSeconds(30));
 		ab.until(ExpectedConditions.presenceOfAllElementsLocatedBy(links));
 	}
+	
+	public void waitjs()
+	{
+		WebDriverWait ab= new WebDriverWait(driver, Duration.ofSeconds(30));
+		ab.until(ExpectedConditions.jsReturnsValue("return document.readyState==='complete';"));
+	}
 
 }
