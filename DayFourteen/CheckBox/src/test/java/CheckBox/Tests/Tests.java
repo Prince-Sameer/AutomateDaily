@@ -12,5 +12,6 @@ public class Tests extends Base{
 	{
 		CheckBox c= new CheckBox(driver);
 		c.check();
+		driver.close();
 	}
 }

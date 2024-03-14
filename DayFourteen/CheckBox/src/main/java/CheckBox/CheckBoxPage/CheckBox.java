@@ -20,7 +20,6 @@ public class CheckBox extends Abstract {
 
     public CheckBox(WebDriver driver) {
         super(driver);
-        
         PageFactory.initElements(driver, this);
     }
 
@@ -28,7 +27,6 @@ public class CheckBox extends Abstract {
     	wait(tagName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", CheckB);
-        CheckB.clear();
         CheckB.click();
        
     }
