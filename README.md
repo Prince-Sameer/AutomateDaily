@@ -1,1 +1,1 @@
-This repo has been created by me make a daily discipline to automate tests and practice automation.
+This repo has been created by me to improve my automation skills
